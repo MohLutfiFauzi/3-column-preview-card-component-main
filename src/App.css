@@ -1,38 +1,105 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+  --ff-big-shoulders-display: "Big Shoulders Display", cursive;
+  --ff-lexend-deca: "Lexend Deca", sans-serif;
+}
+
+h2 {
+  font-family: var(--ff-big-shoulders-display);
+  font-weight: 700;
+  font-size: 38px;
+  color: var(--transparent-white);
+}
+
+p {
+  font-family: var(--ff-lexend-deca);
+  font-weight: 400;
+  font-size: 0.938rem;
+  color: var(--transparent-white);
+  line-height: 1.7;
+}
+
 .App {
-  text-align: center;
+  background-color: var(--very-light-gray);
+  padding: 5rem 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-sedans {
+  background-color: var(--bright-orange);
+  padding: 2.5rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.card-sedans > button {
+  color: var(--bright-orange);
+  background-color: white;
+  width: fit-content;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card-suvs {
+  background-color: var(--dark-cyan);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card-suvs > button {
+  color: var(--dark-cyan);
+  background-color: white;
+  width: fit-content;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+}
+
+.card-luxury {
+  background-color: var(--very-dark-cyan);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card-luxury > button {
+  color: var(--very-dark-cyan);
+  background-color: white;
+  width: fit-content;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+}
+
+.container {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .App {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .container {
+    max-width: 55rem;
+    display: flex;
+  }
+
+  .card-sedans > button,
+  .card-suvs > button,
+  .card-luxury > button {
+    margin-top: 3rem;
   }
 }
